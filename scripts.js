@@ -55,5 +55,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+const fullscreenBtn = document.getElementById('fullscreenBtn');
+        
+fullscreenBtn.addEventListener('click', function() {
+    const elem = document.documentElement;
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) {
+        elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) {
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+        elem.msRequestFullscreen();
+    }
+});
+
 updateCounter();
 setInterval(updateCounter, 1000);
