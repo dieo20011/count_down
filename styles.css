@@ -1,0 +1,197 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1A183E;
+    overflow: hidden;
+  }
+  .heart-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+  
+  .heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: pink;
+    transform: rotate(45deg);
+    animation: fall 5s infinite;
+  }
+  
+  .heart::before,
+  .heart::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: pink;
+    border-radius: 50%;
+  }
+  
+  .heart::before {
+    top: -10px;
+    left: 0;
+  }
+  
+  .heart::after {
+    top: 0;
+    left: -10px;
+  }
+  
+  @keyframes fall {
+    0% {
+      top: -10%;
+      left: calc(100% * var(--i) / 10);
+      opacity: 1;
+    }
+    100% {
+      top: 110%;
+      left: calc(100% * var(--i) / 10);
+      opacity: 0;
+    }
+  }
+  
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    max-height: 700px;
+    opacity: 0.9;
+    background: rgb(238,174,202);
+  background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+  }
+  
+  h1 {
+    color: #333;
+    font-size: 2.5em;
+    font-weight: bold;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #counter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    margin: 20px 0;
+  }
+  
+  .time-segment {
+    margin: 0 3px;
+    padding: 10px;
+    border: 3px solid pink;
+    border-radius: 10px;
+    background: white;
+    color: #ff69b4;
+    display: inline-block;
+    text-align: center;
+  }
+  
+  .slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin: auto;
+    max-height: 800px;
+  }
+  
+  img {
+    vertical-align: middle;
+    width: 100%;
+    border-radius: 10px;
+    max-height: 800px;
+  }
+  
+  @keyframes rotate {
+      from {
+          transform: rotate(0deg);
+      }
+      to {
+          transform: rotate(360deg);
+      }
+  }
+  
+  .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+  }
+  
+  @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+  }
+  .audio-player {
+    border-radius: 8px; /* Rounded corners */
+    margin-top: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .audio-player::-webkit-media-controls-panel {
+    display: flex;
+    justify-content: center;
+    border-radius: 8px; /* Rounded corners for controls panel */
+  }
+  
+  .audio-player::-webkit-media-controls-current-time-display,
+  .audio-player::-webkit-media-controls-time-remaining-display,
+  .audio-player::-webkit-media-controls-timeline,
+  .audio-player::-webkit-media-controls-volume-slider,
+  .audio-player::-webkit-media-controls-mute-button,
+  .audio-player::-webkit-media-controls-fullscreen-button,
+  .audio-player::-webkit-media-controls-playback-rate-button,
+  .audio-player::-webkit-media-controls-seek-back-button,
+  .audio-player::-webkit-media-controls-seek-forward-button {
+    display: none !important;
+  }
+  
+  /* Additional customization */
+  .audio-player::-webkit-media-controls-play-button {
+    background-color: #555; /* Background color of play button */
+    color: white; /* Color of play button */
+    border-radius: 50%; /* Rounded play button */
+    width: 50px; /* Width of play button */
+    height: 50px; /* Height of play button */
+  }
+  
+  .custom-audio-player {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  
+  .play-button {
+    background-color: #555;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1em;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow */
+  }
+  
+  .play-button:hover {
+    background-color: #444;
+  }

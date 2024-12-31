@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐼 ❤️ 🐥</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🐼 <span class="heart-a">❤️</span> 🐥</h1>
+        <div id="counter">
+            <div class="time-segment">
+                <span id="days">0</span> ngày
+            </div>
+            <div class="time-segment">
+                <span id="hours">0</span> giờ
+            </div>
+            <div class="time-segment">
+                <span id="minutes">0</span> phút
+            </div>
+            <div class="time-segment">
+                <span id="seconds">0</span> giây
+            </div>
+        </div>
+        <div class="slideshow-container">
+            <div class="mySlides">
+                <img src="/img/1.jpg" style="width:150px;height: 50%;" class="rotating">
+            </div>
+        </div>       
+    </div>
+    <div class="heart-container">
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+      </div>
+      <div class="custom-audio-player">
+        <button id="playBtn" class="play-button"><i class="fas fa-play"></i></button>
+      </div>
+      <audio id="myAudio" loop>
+        <source src="abc.mp3" type="audio/mpeg">
+      </audio>   
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
